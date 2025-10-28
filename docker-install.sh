@@ -95,7 +95,7 @@ if [ "$EUID" -ne 0 ]; then
     if [ "$response" = "y" ] || [ "$response" = "Y" ]; then
         sudo usermod -aG docker "$USER"
         print_success "User $USER added to docker group"
-        print_warning "Please log out and log back in for group changes to take effect, or run: newgrp docker"
+        print_warning "Please log out and log back in for group changes to take effect, or reboot if using a virtual machine"
     fi
 fi
 
